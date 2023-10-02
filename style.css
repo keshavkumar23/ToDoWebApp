@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3f6b7;
+  margin: 0;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  overflow-x: hidden;
+}
+.head {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.Input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 95%;
+  max-width: 400px;
+}
+.Input input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  outline: none;
+  background: none;
+
+}
+.Input button {
+  background: black;
+  color: white;
+  width: 70px;
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 20px;
+  font-weight: 400;
+  border: none;
+  font-size: 1.1rem;
+}
+.Input button:hover {
+  color: black;
+  background: rgb(227, 225, 225);
+  cursor: pointer;
+}
+.task {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10vh;
+}
+.ToDo {
+  flex-grow: 1;
+  max-width: 400px;
+  background: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 60vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.ToDo ol {
+  list-style: none;
+}
+.ToDo h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ToDo li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 60px;
+  border-radius: 25px;
+  position: relative;;
+  font-weight: 400;
+}
+.ToDo ol li button {
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  background: black;
+  color: white;
+  width: 50px;
+  height: 25px;
+  border-radius: 15px;
+  margin: 5px;
+}
+.ToDo li .marktask{
+  background-color: blue;
+  position: absolute;
+  right: 50px;
+}
+.ToDo li .deletetask{
+  background-color: red;
+}
+.ToDo li .marktask:hover{
+  border: 2px solid black;
+}
+.ToDo li .deletetask:hover{
+  border: 2px solid black;
+}
+@media screen and (max-width: 550px) {
+  .Input button {
+    width: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    margin-bottom: 20px;
+  }
+  .Input{
+    display: flex;
+    flex-direction: column;
+  }
+  .task {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ToDo {
+    max-width: none;
+  }
+}
